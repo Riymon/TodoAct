@@ -1,0 +1,104 @@
+body {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.10);
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 36px 28px 28px 28px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(30, 60, 120, 0.25);
+    text-align: center;
+    backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(135, 206, 250, 0.18);
+}
+
+h1 {
+    color: #87cefa;
+    margin-bottom: 24px;
+    font-size: 2.1rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(135, 206, 250, 0.15);
+}
+
+#search-input {
+    width: 70%;
+    padding: 12px;
+    border: 1.5px solid #87cefa;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 14px;
+    outline: none;
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    transition: border 0.2s, background 0.2s;
+}
+
+#search-input:focus {
+    border: 2px solid #fff;
+    background: rgba(135, 206, 250, 0.10);
+}
+
+#search-btn {
+    padding: 12px 24px;
+    background: #87cefa;
+    color: #232526;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+    box-shadow: 0 2px 8px rgba(135, 206, 250, 0.10);
+    transition: background 0.2s, color 0.2s;
+}
+
+#search-btn:hover {
+    background: #bfe6ff;
+    color: #232526;
+}
+
+#todo-result {
+    margin-top: 32px;
+    min-height: 120px;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-list li {
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid #87cefa;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    padding: 18px 14px;
+    color: #fff;
+    font-size: 1.08rem;
+    box-shadow: 0 2px 8px rgba(135, 206, 250, 0.08);
+    text-align: left;
+    transition: background 0.2s, border 0.2s;
+}
+
+.todo-list li strong {
+    color: #87cefa;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        padding: 18px 4vw;
+    }
+    #search-input {
+        width: 60vw;
+    }
+}
