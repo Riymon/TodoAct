@@ -1,9 +1,16 @@
 document.getElementById('search-btn').addEventListener('click', async () => {
     const resultDiv = document.getElementById('todo-result'); // <-- use 'todo-result'
     resultDiv.innerHTML = '<p>Loading...</p>';
+    const fetchOptions = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+    const API_URL = 'https://dummyjson.com/todos';
 
     try {
-        const response = await fetch('https://dummyjson.com/todos');
+        const response = await fetch(API_URL, fetchOptions);
         if (!response.ok) {
             throw new Error('Failed to fetch todos');
         }
